@@ -7,7 +7,7 @@ public class HangManGame {
     private final String synonym;       
     private final String antonym;
     private final StringBuilder guessedWord;  //tracks correctly guessed letters
-    private int attemptsLeft;           //remaining incorrect guesses allowed
+    private int attemptsLeft;           //remaining guesses 
 
    //gets the word data from the dictionary API and then usees the hints and word for the actual game 
     public HangManGame(WordData wordData) {
@@ -29,7 +29,7 @@ public class HangManGame {
         boolean correctGuess = false;//make it false at first 
         letter = Character.toLowerCase(letter);
         
-        //for loop to check through each time
+        //for loop to check through each time if the guess was correct or not 
         for (int i = 0; i < word.length(); i++) {
             if (Character.toLowerCase(word.charAt(i)) == letter) {
                 guessedWord.setCharAt(i, word.charAt(i));
@@ -47,7 +47,7 @@ public class HangManGame {
 
     //checks if the player has won which is that all the letters were guessed correctly
     public boolean isGameWon() {
-        return guessedWord.toString().equals(word);
+        return guessedWord.toString().equals(word);//once it is equal then game is won 
     }
 
     //now for game over a bit more complicated. It includes by guessing the word or running out of attempts or if timer runs out but that is in the UI class

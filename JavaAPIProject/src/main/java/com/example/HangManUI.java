@@ -71,7 +71,7 @@ public class HangManUI {
                     gameRunning = false;
                 }
             }
-        }, 1000, 1000);  //update every second
+        }, 1000, 1000); //update every second
     }
 
     //all the display feature shown 

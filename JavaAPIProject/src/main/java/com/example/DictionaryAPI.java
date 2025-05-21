@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 //used for making HTTP requests
 import java.net.HttpURLConnection;
 import java.net.URL;
-//used for parsing JSON data
+//used for examining JSON data
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -48,7 +48,7 @@ public class DictionaryAPI {
             JSONArray definitions = firstMeaning.getJSONArray("definitions");
             String definition = definitions.getJSONObject(0).getString("definition");
             
-            //try to get synonyms
+            //try to get synonyms if not available it says so 
             String synonym = "No synonyms available";
             JSONArray synonyms = firstMeaning.optJSONArray("synonyms");
             if (synonyms != null && synonyms.length() > 0) {
@@ -62,12 +62,12 @@ public class DictionaryAPI {
                 antonym = antonyms.getString(0);
             }
             
-            //package everything up nicely
+            //return everything up to the wordData which is then sent to the game then UI 
             return new WordData(word, definition, synonym, antonym);
             
         } catch (Exception e) {
-            //if API fails we use fallback data
-            return new WordData(randomWord, "A common fruit","No synonyms available", "No antonyms available");
+            //if API fails use fallback data
+            return new WordData(randomWord, "A common object","No synonyms available", "No antonyms available");
         }
     }
 
