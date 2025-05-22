@@ -40,8 +40,10 @@ the class which runs the whole game and makes it playable
  - Uses multiple Java methods and logic
  - Parses JSON response using basic string matching
  - Provides interactive user experience through the terminal
+
 ✔ Written Walkthrough ()
  - This document fulfills the walkthrough requirement
+
 ✔Basic statistics(+6%)
 -Gets the average amount of time it took the player to solve the hangman based on how many rounds they played. 
 
