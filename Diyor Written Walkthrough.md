@@ -51,7 +51,7 @@ the class which runs the whole game and makes it playable
 - Filters the synonyms, definitions, and antonyms from the json objects
 
 
-## 4\. Output Example
+## 4. Output Example
 
 **Picture of output on a google doc**
 ![][image1]

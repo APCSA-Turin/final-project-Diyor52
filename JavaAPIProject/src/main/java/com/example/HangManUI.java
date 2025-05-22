@@ -61,8 +61,7 @@ public class HangManUI {
     private void startTimer() {//https://www.youtube.com/watch?app=desktop&v=QEF62Fm81h4 all about the timer 
         timer = new Timer();//30 second timer 
         timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
+            public void run() {//starts the timer
                 if (timeLeft > 0 && gameRunning) {
                     timeLeft--;
                 } else {
@@ -98,7 +97,7 @@ public class HangManUI {
                 timeUp = false;//time up is false 
                 guessedLetters.clear();//clears and makes it underscores again 
                 gameRunning = true;
-                roundStartTime = System.currentTimeMillis();//caluculates the milliseconds to be as precise as possible //https://www.tutorialspoint.com/java/lang/system_currenttimemillis.htm 
+                roundStartTime = System.currentTimeMillis();//caluculates in milliseconds when it started to be as precise as possible //https://www.tutorialspoint.com/java/lang/system_currenttimemillis.htm 
                 startTimer();
                 
                 //all the start features 
@@ -189,13 +188,13 @@ public class HangManUI {
                         finalAverage = 0;
                     }
                     System.out.println("Average time per round: " + finalAverage + " seconds");
-                    System.out.println("Thanks for playing!");
+                    System.out.println("Thanks for playing!!!");
                 }
             }
         } catch (Exception e) {//the exception if it fails to get the word leads to cancel out evertythin and give an error 
             if (timer != null){//avoid the exception error
             timer.cancel();//cancels and done sends an error message 
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());//gives the detail of what caused the error
             e.printStackTrace();
             }
         } 
