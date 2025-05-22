@@ -46,9 +46,11 @@ the class which runs the whole game and makes it playable
 
 ✔Basic statistics(+6%)  
 - Gets the average amount of time it took the player to solve the hangman based on how many rounds they played.
+- Using local data inside my program to get the statistical average 
 
 ✔Filter/Sort data(+2%) 
-- Filters the synonyms, definitions, and antonyms from the json objects
+- Filters the synonyms, definitions, and antonyms from the JSON objects and access those only without the others being needed
+- checking API for the definitions, synonyms, and antonyms
 
 
 ## 4. Output Example
