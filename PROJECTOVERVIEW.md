@@ -1,5 +1,5 @@
 
-#Diyor Abduvaliev: Written Walkthrough 
+# Diyor Abduvaliev: Written Walkthrough 
 
 ## 1.Project Overview - HangMan Game
 This Java project generates a random word from the 100 list of random words. It then gets the word and the person has to guess it either before the full hangman is drawn or before 30 seconds is up with the timer system. It also has a synonym, definition, and antonym hint system from the dictionary API to help the player and make it easier for them. I made it just to entertain other students and to start off my intro into game development. 
