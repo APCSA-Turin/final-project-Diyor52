@@ -54,7 +54,7 @@ the class which runs the whole game and makes it playable
 ## 4. Output Example
 
 **Picture of output on a google doc**
-sfd![][]
+![Screenshot 2025-05-22 190445](https://github.com/user-attachments/assets/370e8e81-7639-4b46-86b0-ec1264d51004)
 
 ## 5. What I Learned
 - I learned how to use an API  
@@ -67,4 +67,5 @@ sfd![][]
 
 - I really had a problem with the timer system as I had to do 2 diverse ones one for the regular start timer and then the other for precise timing and how to incorporate the timer system into my game and utilize it.  
 - In the future especially over summer I am planning on making  a GUI for this project and turn it into my first actual game created with another interface used.
+
 
