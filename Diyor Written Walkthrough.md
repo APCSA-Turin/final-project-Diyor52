@@ -53,7 +53,6 @@ the class which runs the whole game and makes it playable
 
 ## 4. Output Example
 
-**Picture of output on a google doc**
 ![Screenshot 2025-05-22 190445](https://github.com/user-attachments/assets/370e8e81-7639-4b46-86b0-ec1264d51004)
 
 ## 5. What I Learned
