@@ -11,27 +11,30 @@ fetches the data needed for the game to function using the API.
 WordData.getData() = gets the data from api and sends it to the word data class by accessing the synonyms, antonyms and definition of the word.
 getData()= string version which actually gets the stuff from the API. 
 
-     2.   HangManGame.java
+HangManGame.java
 core logic of the game. Basically makes the hidden spaces the game won game over those things 
 	       Methods:
-Getters for everything: synonym, definition, antonym, and gameover and game won 
-guessletter(char letter) : takes the letter and checks if that letter is inside the given hidden word.
-  3.  HangManUI.java 
+            Getters for everything: synonym, definition, antonym, and gameover and game won 
+            guessletter(char letter) : takes the letter and checks if that letter is inside the given hidden word.
+
+HangManUI.java 
 makes the interface in the terminal of the actual game use the hangman game class to help. 
 	    Methods: 
-InitializeHangManStages : makes the drawings in the terminal  
-startTimer() : uses the timer system imported to start the timer. The timer system allows the user to set a certain time amount for the player to win or lose if it goes past 30 seconds and the word is still not guessed. 
-dispayGame(): displays the whole game 
-PlayGame(): starts the whole game and the logic while the game is running. includes the timer; the average time it takes you to complete; and to check the letter guessed and if it is possible to accept it
+        InitializeHangManStages : makes the drawings in the terminal  
+        startTimer() : uses the timer system imported to start the timer. The timer system allows the user to set a certain time amount for the player to win or lose if it goes past 30 seconds and the word is still not guessed. 
+        dispayGame(): displays the whole game 
+        PlayGame(): starts the whole game and the logic while the game is running. includes the timer; the average time it takes you to complete; and to check the letter guessed and if it is possible to accept it
 
-4. WordData.java
+
+WordData.java
 class that holds all the info gotten from the API and without this class to get everything most of the code would not have worked. Sends the info gotten to the game class then that game sends to the UI.
 
-5. App.java
+App.java
 the class which runs the whole game and makes it playable
 
 .
 **3. Features Implemented (Rubric Aligned)**
+
 ✔ Base Project (88%)
  - Uses an external API (Free Dictionary API)
  - Uses multiple Java methods and logic
