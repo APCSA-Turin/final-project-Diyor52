@@ -14,7 +14,7 @@ public class DictionaryAPI {
     //100 common words for the game
     private static final String[] possibleWords = {
         "apple", "banana", "cherry", "date", "elderberry","fig", "grape", "honeydew", "kiwi", "lemon","mango", "nectarine", "orange", "peach", "quince","raspberry", "strawberry", "tangerine", "project", "vanilla",
-        "watermelon", "apricot", "blueberry", "cantaloupe", "jam","elderflower", "feijoa", "guava", "huckleberry", "imbe","jackfruit", "kumquat", "lychee", "mulberry", "olive",
+        "watermelon", "apricot", "blueberry", "cantaloupe", "jam","elderflower", "feijoa", "guava", "huckleberry", "chicken","jackfruit", "kumquat", "lychee", "mulberry", "olive",
         "persimmon", "pomegranate", "avocado", "blackberry", "coconut","durian", "eggplant", "grapefruit", "cocao", "jujube","hello", "lime", "melon", "papaya", "pear",
         "tiger", "lion", "penguin", "wolf", "computer","phone", "keyboard", "mouse", "monitor", "laptop","tablet", "charger", "cable", "router", "printer","scanner", "speaker", "headphones", "microphone", "camera",
         "television", "remote", "battery", "flashlight", "clock","watch", "bracelet", "necklace", "earrings", "ring","jacket", "shirt", "pants", "shoes", "socks","hat", "gloves", "scarf", "umbrella", "backpack",

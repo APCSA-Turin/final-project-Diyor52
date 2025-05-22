@@ -200,7 +200,7 @@ public class HangManUI {
             }
         } 
         
-        scanner.close(); //always closes scanner 
+        scanner.close(); //always closes scanner
         
     }
 }
