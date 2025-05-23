@@ -45,6 +45,21 @@ public class HangManGame {
         return correctGuess;
     }
 
+    //allows player to guess the entire word at once instead of just the letters to make it faster but have to make sure no space in front or anything like that 
+    public boolean guessWord(String guessedWord) {
+        if (word.equals(guessedWord)) {
+            //if correct reveals all letters by using a for loop 
+            for (int i = 0; i < word.length(); i++) {
+                this.guessedWord.setCharAt(i, word.charAt(i));//sets each character to the correct letter if guessed correctly 
+            }
+            return true;
+        } else {
+            //if wrong set attempts to 0 making the player automaticlly lose and add 30 seconds to your timer 
+            attemptsLeft = 0;
+            return false;
+        }
+    }
+
     //checks if the player has won which is that all the letters were guessed correctly
     public boolean isGameWon() {
         return guessedWord.toString().equals(word);//once it is equal then game is won 

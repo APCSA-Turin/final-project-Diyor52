@@ -24,6 +24,10 @@ getData()
          Methods:  
 - Getters for everything: synonym, definition, antonym, and gameover and game won  
 
+```java
+guessWord(String guessedWord)
+```
+- takes the full word that is guessed and if that is correct then ends the game with the time it took else if wrong then ends game and the player loses and it adds 30 seconds 
 
 ```java
 guessletter(char letter) 
@@ -31,7 +35,7 @@ guessletter(char letter)
 - takes the letter and checks if that letter is inside the given hidden word.
 
 ### HangManUI.java  
-- makes the interface in the terminal of the actual game use the hangman game class to help.  
+- makes the interface in the terminal of the actual game use the hangman game class to help. This uses the hangManGame class while displaying the game and while running checks if letter guessed; word guessed; timer up; time it took; average; final average 
       Methods:  
 
 ```java

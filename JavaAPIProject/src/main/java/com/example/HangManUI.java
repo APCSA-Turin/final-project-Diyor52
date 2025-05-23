@@ -85,6 +85,7 @@ public class HangManUI {
         System.out.println("Definition: " + game.getDefinition());
         System.out.println("Synonym: " + game.getSynonym());
         System.out.println("Antonym: " + game.getAntonym());
+
     }
 
     //plays the game and starts it
@@ -103,34 +104,49 @@ public class HangManUI {
                 //all the start features 
                 System.out.println("\nWelcome to Hangman!");
                 System.out.println("You have 30 seconds to guess the word!");
-                System.out.println("Your word has " + game.getWord().length() + 
-                                  " letters: " + game.getGuessedWord());
+                System.out.println("Your word has " + game.getWord().length() + " letters: " + game.getGuessedWord());
+                
                 //made a while loop to go through each time until one of the things here is false 
                 while (gameRunning && !game.isGameOver() && !timeUp) {
                     displayGame();
-                    System.out.print("\nGuess a letter: ");//guesses the letter 
+                    System.out.println("***Be aware if you guess the whole word and get it wrong it automatically makes you lose and adds 30 seconds to your average!!!!!");
+                    System.out.print("\nGuess a letter or type the whole word: ");//can guess the whole word or single letters 
                     
                     String input = scanner.nextLine().toLowerCase();//takes the input from the user 
-                    if (input.length() != 1 || !Character.isLetter(input.charAt(0))) {//to make sure it is a single letter 
-                        System.out.println("Please enter a single letter.");
-                        continue;//used to make sure the attemps dont decrease once guess is given 
-                    }
                     
-                    char guess = input.charAt(0);
-                    if (guessedLetters.contains(guess)) {
-                        System.out.println("You already guessed that!");
-                        continue;//same with this 
-                    }
+                    //check if input is a single letter instead of a full word 
+                    //the letter is an actual single letter
+                    if (input.length() == 1 && Character.isLetter(input.charAt(0))){
+                        char guess = input.charAt(0);
+                        if (guessedLetters.contains(guess)) {
+                            System.out.println("You already guessed that!");
+                            continue;
+                        }
+                        
+                        guessedLetters.add(guess);//adding the guess if it is correct 
+                        if (game.guessLetter(guess)) {
+                            System.out.println("Correct!");//guessed the correct letter 
+                        } else {
+                            System.out.println("Wrong guess!");
+                        }
+                    } 
                     
-                    guessedLetters.add(guess);//adds the guess to the word 
-                    if (game.guessLetter(guess)) {
-                        System.out.println("Correct!");//if letter correct says correct 
-                    } else {
-                        System.out.println("Wrong guess!");
+                    //check if input is a word guess instead of a single character 
+                    else if (input.length() > 1) {
+                        if (game.guessWord(input)) {
+                            System.out.println("Correct! You guessed the word!");
+                        } else {
+                            System.out.println("Wrong word guess! Game over!");
+                            timeUp = true; //end the game and timer of 30 seconds is up 
+                        }
+                    } 
+                    else {
+                        System.out.println("Please enter a single letter or a word guess: ");
+                        continue;
                     }
                     
                     if (game.isGameWon()) {
-                        gameRunning = false;//if won stops game 
+                        gameRunning = false;
                     }
                 }
                 
@@ -200,6 +216,5 @@ public class HangManUI {
         } 
         
         scanner.close(); //always closes scanner
-        
     }
 }
