@@ -10,14 +10,14 @@ This Java project generates a random word from the 100 list of random words. It 
 - fetches the data needed for the game to function using the API.  
         Methods:  
 ```java
-WordData.getData()
+WordData getData()
 ```
-- gets the data from api and sends it to the word data class by accessing the synonyms, antonyms and definition of the word.  
+- gets the data from api based on the string version of the getData() method and sends it to the word data class by accessing the synonyms, antonyms and definition of the word.  
 
 ```java
 getData()
 ```
-- string version which actually gets the stuff from the API.
+- string version which actually gets the original word from the API.
 
 ### HangManGame.java 
 - core logic of the game. Basically makes the hidden spaces the game won game over those things  
