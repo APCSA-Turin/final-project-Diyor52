@@ -174,11 +174,11 @@ public class HangManUI {
                 //round time in seconds
                 System.out.println("\nTime taken: " + roundTime + " seconds");
                 if (timeUp) {
-                    System.out.println("Time's up! The word was: " + game.getWord());
+                    System.out.println("Time's up!!! The word was: " + game.getWord());
                 } else if (game.isGameWon()) {
-                    System.out.println("You won! The word was: " + game.getWord());
+                    System.out.println("You won!!! The word was: " + game.getWord());
                 } else {
-                    System.out.println("Game over! The word was: " + game.getWord());
+                    System.out.println("Game over!!! The word was: " + game.getWord());
                 }
                 
                 //show average time

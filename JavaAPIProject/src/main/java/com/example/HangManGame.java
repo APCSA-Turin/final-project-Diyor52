@@ -21,7 +21,7 @@ public class HangManGame {
         for (int i = 0; i < word.length(); i++) {
             guessedWord.append("_");
         }
-        this.attemptsLeft = 6;//has 6 attempts to draw out hangman
+        attemptsLeft = 6;//has 6 attempts to draw out hangman
     }
 
     //gets the letter from the player and what they inputted and if its correct sets the character at the index in which it is supposed to be 
@@ -63,6 +63,7 @@ public class HangManGame {
     //checks if the player has won which is that all the letters were guessed correctly
     public boolean isGameWon() {
         return guessedWord.toString().equals(word);//once it is equal then game is won 
+        //toString as it is a stringbuilder which allows the object to be modified without having to make new objects 
     }
 
     //now for game over a bit more complicated. It includes by guessing the word or running out of attempts or if timer runs out but that is in the UI class
