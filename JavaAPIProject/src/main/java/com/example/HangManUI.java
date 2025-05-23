@@ -191,7 +191,7 @@ public class HangManUI {
                     System.out.println("Thanks for playing!!!");
                 }
             }
-        } catch (Exception e) {//the exception if it fails to get the word leads to cancel out evertythin and give an error 
+        } catch (Exception e) {//the exception if it fails to get the word; leads to cancel out everything and give an error 
             if (timer != null){//avoid the exception error
             timer.cancel();//cancels and done sends an error message 
             System.out.println("Error: " + e.getMessage());//gives the detail of what caused the error
