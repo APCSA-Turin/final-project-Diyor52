@@ -7,7 +7,7 @@ This Java project generates a random word from the 100 list of random words. It 
 
 ## 2. Code Breakdown  
 ### Dictionary API.java 
-fetches the data needed for the game to function using the API.  
+- fetches the data needed for the game to function using the API.  
         Methods:  
 ```java
 WordData.getData()
@@ -20,7 +20,7 @@ getData()
 - string version which actually gets the stuff from the API.
 
 ### HangManGame.java 
-core logic of the game. Basically makes the hidden spaces the game won game over those things  
+- core logic of the game. Basically makes the hidden spaces the game won game over those things  
          Methods:  
 - Getters for everything: synonym, definition, antonym, and gameover and game won  
 
@@ -31,18 +31,34 @@ guessletter(char letter)
 - takes the letter and checks if that letter is inside the given hidden word.
 
 ### HangManUI.java  
-makes the interface in the terminal of the actual game use the hangman game class to help.  
+- makes the interface in the terminal of the actual game use the hangman game class to help.  
       Methods:  
-- InitializeHangManStages : makes the drawings in the terminal    
-- startTimer() : uses the timer system imported to start the timer. The timer system allows the user to set a certain time amount for the player to win or lose if it goes past 30 seconds and the word is still not guessed.  
-- dispayGame(): displays the whole game  
-- PlayGame(): starts the whole game and the logic while the game is running. includes the timer; the average time it takes you to complete; and to check the letter guessed and if it is possible to accept it
+
+```java
+InitializeHangManStages() 
+```
+- makes the drawings in the terminal  
+
+```java
+startTimer() 
+```
+- uses the timer system imported to start the timer. The timer system allows the user to set a certain time amount for the player to win or lose if it goes past 30 seconds and the word is still not guessed.
+
+```java
+dispayGame()
+```
+- displays the whole game 
+
+```java
+playGame():
+```
+- starts the whole game and the logic while the game is running. includes the timer; the average time it takes you to complete; and to check the letter guessed and if it is possible to accept it
 
 ### WordData.java  
-class that holds all the info gotten from the API and without this class to get everything most of the code would not have worked. Sends the info gotten to the game class then that game sends to the UI.
+- class that holds all the info gotten from the API and without this class to get everything most of the code would not have worked. Sends the info gotten to the game class then that game sends to the UI.
 
 ### App.java 
-the class which runs the whole game and makes it playable
+- the class which runs the whole game and makes it playable
 
 .  
 ## 3. Features Implemented (Rubric Aligned)
