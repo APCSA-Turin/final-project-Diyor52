@@ -2,6 +2,7 @@ package com.example;
 
 //this class helps with the core logic for the guessing game: it includes the target the hints the players progress and the attempts left all in this class
 public class HangManGame {
+    //all constants
     private final String word;          
     private final String definition;  //all the variables used here 
     private final String synonym;       
