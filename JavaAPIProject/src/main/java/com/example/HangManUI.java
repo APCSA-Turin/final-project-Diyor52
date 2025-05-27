@@ -123,7 +123,7 @@ public class HangManUI {
                             continue;
                         }
                         
-                        guessedLetters.add(guess);//adding the guess if it is correct 
+                        guessedLetters.add(guess);//adding the guess to the array of guessed letters 
                         if (game.guessLetter(guess)) {
                             System.out.println("Correct!");//guessed the correct letter 
                         } else {
