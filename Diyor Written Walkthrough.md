@@ -65,6 +65,7 @@ startTimer()
 - uses the timer system imported to start the timer. 
 - The timer system allows the user to set a certain time amount for the player to win or lose 
 - if it goes past 30 seconds and the word is still not guessed then you lose. 
+- uses currentmilli to get the time in milliseconds then convert to seconds and how long it took
 
 ```java
 dispayGame()
