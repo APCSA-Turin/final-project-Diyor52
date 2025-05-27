@@ -3,7 +3,7 @@
 # Diyor Abduvaliev: Written Walkthrough
 
 ## 1.Project Overview- HangMan Game 
-This Java project generates a random word from the 100 list of random words. It then gets the word and the person has to guess it either before the full hangman is drawn or before 30 seconds is up with the timer system. It also has a synonym, definition, and antonym hint system from the dictionary API to help the player and make it easier for them. I made it just to entertain other students and to start off my intro into game development. You have to type each letter as there is no feature that allows the player to directly type out the word. Play again feature incorparated too as there is a statistical average used which gets the average amount of time it took the player to guess the word correctly in the number of rounds they played.If the hangman is fully drawn or timer runs out it instantly makes that round time equal to 30. 
+This Java project generates a random word from the 100 list of random words. It then gets the word and the person has to guess it either before the full hangman is drawn or before 30 seconds is up with the timer system. It also has a synonym, definition, and antonym hint system from the dictionary API to help the player and make it easier for them. I made it just to entertain other students and to start off my intro into game development. You have to type each letter or type the whole word out. Play again feature incorparated too as there is a statistical average used which gets the average amount of time it took the player to guess the word correctly in the number of rounds they played.If the hangman is fully drawn or timer runs out it instantly makes that round time equal to 30. 
 
 ## 2. Code Breakdown  
 ### Dictionary API.java 
