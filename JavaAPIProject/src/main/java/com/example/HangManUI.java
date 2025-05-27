@@ -167,6 +167,7 @@ public class HangManUI {
                 double averageTime;
                 if (roundsPlayed > 0) {
                     averageTime = (double)totalRoundTimes / roundsPlayed;
+                    averageTime = Math.round(averageTime*100)/100.0;
                 } else {
                     averageTime = 0;
                 }
@@ -199,7 +200,7 @@ public class HangManUI {
                     //calculate final average
                     double finalAverage;
                     if (roundsPlayed > 0) {
-                        finalAverage = (double)totalRoundTimes / roundsPlayed;
+                        finalAverage = Math.round(((double)totalRoundTimes / roundsPlayed)*100)/100.0;
                     } else {
                         finalAverage = 0;
                     }
