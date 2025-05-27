@@ -200,7 +200,7 @@ public class HangManUI {
                     //calculate final average
                     double finalAverage;
                     if (roundsPlayed > 0) {
-                        finalAverage = Math.round(((double)totalRoundTimes / roundsPlayed)*100)/100.0;
+                        finalAverage = Math.round(((double)totalRoundTimes / roundsPlayed)*100)/100.0;//https://stackoverflow.com/questions/11701399/round-up-to-2-decimal-places-in-java 
                     } else {
                         finalAverage = 0;
                     }
