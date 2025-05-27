@@ -13,11 +13,23 @@ This Java project generates a random word from the 100 list of random words. It 
 WordData getData()
 ```
 - gets the data from api based on the string version of the getData() method and sends it to the word data class by accessing the synonyms, antonyms and definition of the word.  
+- gets the endpoint from the getData() method 
+- looks through the array of words
+- makes the JSON object of the first index of the array 
+- gets the word from the keyword "word" in the JSON object
+- looks through the array of meanings of the first word and creates a JSON object of the first word
+- looks through the array of definitions of the JSON object that was created and picks the first definition 
+- looks through the array of synonyms as well and picks the first one and if null or its is not there then it returns "No synonym available" 
+- looks through the array of antonym as well and picks the first one and if null or its is not there then it returns "No antonym available" 
+- returns the info gathered as a WordData object
 
 ```java
-getData()
+getData(String endpoint)
 ```
 - string version which actually gets the original word from the API.
+- Makes an HTTP post request to the API
+- connects my program to the API using this endpoint
+- returns the JSON in which the user should use 
 
 ### HangManGame.java 
 - core logic of the game. Basically makes the hidden spaces the game won game over those things  
@@ -27,12 +39,16 @@ getData()
 ```java
 guessWord(String guessedWord)
 ```
-- takes the full word that is guessed and if that is correct then ends the game with the time it took else if wrong then ends game and the player loses and it adds 30 seconds 
+- takes the full word that is guessed
+- if that is correct then ends the game with the time it took 
+- else if wrong then ends game and the player loses and adds 30 seconds 
 
 ```java
 guessletter(char letter) 
 ```
 - takes the letter and checks if that letter is inside the given hidden word.
+- if not it takes off a life
+- letter is added to the hashset of letters guessed. 
 
 ### HangManUI.java  
 - makes the interface in the terminal of the actual game use the hangman game class to help. This uses the hangManGame class while displaying the game and while running checks if letter guessed; word guessed; timer up; time it took; average; final average 
@@ -46,7 +62,9 @@ InitializeHangManStages()
 ```java
 startTimer() 
 ```
-- uses the timer system imported to start the timer. The timer system allows the user to set a certain time amount for the player to win or lose if it goes past 30 seconds and the word is still not guessed.
+- uses the timer system imported to start the timer. 
+-The timer system allows the user to set a certain time amount for the player to win or lose 
+- if it goes past 30 seconds and the word is still not guessed then you lose. 
 
 ```java
 dispayGame()
@@ -56,7 +74,11 @@ dispayGame()
 ```java
 playGame():
 ```
-- starts the whole game and the logic while the game is running. includes the timer; the average time it takes you to complete; and to check the letter guessed and if it is possible to accept it
+- starts the whole game and the logic while the game is running. 
+- includes the timer
+- the average time it takes you to complete
+- check the letter guessed and if it is possible to accept it
+- checks if the word is fully guessed 
 
 ### WordData.java  
 - class that holds all the info gotten from the API and without this class to get everything most of the code would not have worked. Sends the info gotten to the game class then that game sends to the UI.
