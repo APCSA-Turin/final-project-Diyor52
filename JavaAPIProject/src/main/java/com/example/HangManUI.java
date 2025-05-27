@@ -102,13 +102,14 @@ public class HangManUI {
                 startTimer();
                 
                 //all the start features 
-                System.out.println("\nWelcome to Hangman!");
+                System.out.println("Welcome to Hangman!");
                 System.out.println("You have 30 seconds to guess the word!");
                 System.out.println("Your word has " + game.getWord().length() + " letters: " + game.getGuessedWord());
                 
                 //made a while loop to go through each time until one of the things here is false 
                 while (gameRunning && !game.isGameOver() && !timeUp) {
                     displayGame();
+                    System.out.println("");
                     System.out.println("***Be aware if you guess the whole word and get it wrong it automatically makes you lose and adds 30 seconds to your average!!!!!");
                     System.out.print("\nGuess a letter or type the whole word: ");//can guess the whole word or single letters 
                     
@@ -130,7 +131,6 @@ public class HangManUI {
                             System.out.println("Wrong guess!");
                         }
                     } 
-                    
                     //check if input is a word guess instead of a single character 
                     else if (input.length() > 1) {
                         if (game.guessWord(input)) {
@@ -153,7 +153,7 @@ public class HangManUI {
                 timer.cancel();
                 displayGame();//end game and shows off stats 
 
-                //calculate stats
+                //calculate stats how long it took 
                 long roundTime = (System.currentTimeMillis() - roundStartTime) / 1000;//from milliseconds to seconds to make it much more accurate 
                 if (timeUp || !game.isGameWon()) {
                     roundTime = 30;  //max time if failed
