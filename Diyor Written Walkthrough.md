@@ -50,6 +50,13 @@ guessletter(char letter)
 - if not it takes off a life
 - letter is added to the hashset of letters guessed. 
 
+```java
+HangManGame(WordData wordData)
+```
+
+- constructor of the game class and gets the data from the word data class and uses it to complete its own process. 
+
+
 ### HangManUI.java  
 - makes the interface in the terminal of the actual game use the hangman game class to help. This uses the hangManGame class while displaying the game and while running checks if letter guessed; word guessed; timer up; time it took; average; final average 
       Methods:  
@@ -81,8 +88,25 @@ playGame():
 - check the letter guessed and if it is possible to accept it
 - checks if the word is fully guessed 
 
+
+```java
+HangManUI(HangManGame game)
+```
+
+- constructor of the UI class
+- initializes the game using the game class
+- uses hashset in order to add guessed letters 
+- scanner to input user guesses
+- initializes the drawings as well
+
+
 ### WordData.java  
 - class that holds all the info gotten from the API and without this class to get everything most of the code would not have worked. Sends the info gotten to the game class then that game sends to the UI.
+
+```java
+WordData(String word, String definition, String synonym, String antonym)
+```
+- constructor of the wordData class initializes and declares each of the parameters based on the data gotten from the dictionary API class
 
 ### App.java 
 - the class which runs the whole game and makes it playable
