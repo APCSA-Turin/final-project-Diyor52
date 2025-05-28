@@ -87,6 +87,14 @@ playGame():
 ### App.java 
 - the class which runs the whole game and makes it playable
 
+```java
+playGame():
+```
+- generates everything based on the other classes and runs the game
+- creates the wordData based on the dictionary API class
+- then uses the word Data inside the HangManGame class to initialize everything
+- finally uses the hangManGame class to make the HangmanUI and then plays game
+
 .  
 ## 3. Features Implemented (Rubric Aligned)
 
