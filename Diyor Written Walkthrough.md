@@ -112,9 +112,9 @@ WordData(String word, String definition, String synonym, String antonym)
 - the class which runs the whole game and makes it playable
 
 ```java
-playGame():
+Main(String[] args)
 ```
-- generates everything based on the other classes and runs the game
+- generates everything based on the other classes and runs the game starts with API class then word data class then the hangmangame class then lastly the hangmanUi class 
 - creates the wordData based on the dictionary API class
 - then uses the word Data inside the HangManGame class to initialize everything
 - finally uses the hangManGame class to make the HangmanUI and then plays game
