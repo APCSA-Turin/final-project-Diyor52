@@ -16,7 +16,7 @@ public class App {
             ui.playGame();
             
         } catch (Exception e) {//exception if it does not start it prints that it failed incase of missing word data/ API is down or much more 
-            System.out.println("Failed to initialize the game: " + e.getMessage());
+            System.out.println("failed to initialize the game: " + e.getMessage());
         }
     }
 }
